@@ -1,0 +1,605 @@
+/* AmBank Red Design — original layout and typography preserved */
+:root {
+    --lg:20px;
+    --md:16px;
+    --sm:14px;
+    --red:#ff0009;
+    --red2:#b00006;
+    --dark:#13161a;
+    --ink:#1d2a37;
+    --line:#e5e8ec;
+    --muted:#5d6873;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+    background: #eef6fc;
+    color: var(--ink);
+}
+
+button, input {
+    font: inherit;
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 60px 40px;
+    background: #f7fbff;
+    position: relative;
+}
+
+    .page:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255,249,232,.35);
+        pointer-events: none;
+    }
+
+.desktop-shell {
+    position: relative;
+    z-index: 1;
+    width: min(1160px,94vw);
+    height: 720px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(50,40,0,.16);
+}
+
+.red-panel {
+    position: relative;
+    overflow: hidden;
+    background: #ff0009 url('assets/side-bg-design-ambank.jpg') center bottom / cover no-repeat;
+    color: #fff;
+    padding: 31px 28px;
+}
+
+    .red-panel:after {
+        content: "";
+        position: absolute;
+        left: -80px;
+        right: -80px;
+        bottom: -80px;
+        height: 270px;
+        background: linear-gradient(20deg,rgba(0,0,0,.55),rgba(255,0,9,.22));
+        transform: skewY(-14deg);
+    }
+
+.brand {
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .brand img {
+        width: 200px;
+        height: auto;
+        filter: brightness(0) invert(1);
+    }
+
+.trust-left {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    display: grid;
+    gap: 23px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .trust-item img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .trust-item strong {
+        display: block;
+        font-size: var(--sm);
+        color: #fff;
+    }
+
+    .trust-item span {
+        display: block;
+        font-size: 11px;
+        margin-top: 5px;
+        color: #fff;
+    }
+
+.city-glow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48%;
+    mix-blend-mode: screen;
+    opacity: .8;
+}
+
+.white-panel {
+    background: #fff;
+    padding: 27px 20px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper {
+    width: 330px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 31px;
+    position: relative;
+}
+
+    .stepper:before {
+        content: "";
+        position: absolute;
+        left: 17%;
+        right: 17%;
+        top: 15px;
+        height: 1px;
+        background: #dfe1e4;
+    }
+
+.step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+    .step b {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #eceef0;
+        display: grid;
+        place-items: center;
+        font-size: var(--sm);
+        color: #222;
+    }
+
+    .step.active b {
+        background: var(--red);
+        color: #fff;
+    }
+
+    .step span {
+        font-size: 12px;
+    }
+
+.transaction-card {
+    border: 1px solid #dfe3e7;
+    background: #f8f9fa;
+    border-radius: 9px;
+    padding: 12px 9px 8px;
+    margin-bottom: 15px;
+}
+
+.tx-top, .tx-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    .tx-top strong {
+        font-size: var(--sm);
+        display: block;
+    }
+
+    .tx-top span, .tx-meta span {
+        font-size: 12px;
+        display: block;
+        margin-top: 7px;
+    }
+
+.amount {
+    text-align: right;
+}
+
+    .amount strong {
+        font-size: var(--lg);
+        color: #8f1015;
+        display: block;
+        margin-top: 4px;
+    }
+
+.tx-meta {
+    border-top: 1px solid #e2e5e8;
+    margin-top: 7px;
+    padding-top: 7px;
+}
+
+    .tx-meta > div + div {
+        text-align: right;
+        border-left: 1px solid #e0e2e5;
+        padding-left: 20px;
+    }
+
+    .tx-meta strong {
+        font-size: 12px;
+    }
+
+    .tx-meta button {
+        border: 0;
+        background: none;
+        padding: 0;
+        color: #555;
+        cursor: pointer;
+    }
+
+.tx-details {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: none;
+    font-size: 11px;
+    color: #333;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+    .tx-details span {
+        margin-left: 4px;
+    }
+
+.login-form {
+    display: block;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+    .field-head label {
+        font-size: var(--sm);
+        font-weight: 700;
+    }
+
+    .field-head a {
+        font-size: 10px;
+        color: #8a6500;
+        text-decoration: none;
+    }
+
+.input {
+    height: 46px;
+    border: 1px solid #dce2e8;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #fff;
+}
+
+    .input img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+
+    .input span {
+        font-size: 20px;
+        color: #536277;
+        margin-right: 12px;
+    }
+
+    .input .fallback {
+        display: none;
+    }
+
+    .input input {
+        border: 0;
+        outline: 0;
+        width: 100%;
+        font-size: var(--sm);
+        color: #222;
+    }
+
+        .input input::placeholder {
+            color: #222;
+        }
+
+.next {
+    width: 100%;
+    height: 46px;
+    border: 0;
+    border-radius: 25px;
+    background: linear-gradient(90deg,#ff0009,#ff0009);
+    color: #fff;
+    font-size: var(--md);
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 19px;
+    box-shadow: 0 4px 7px rgba(196,22,28,.18);
+    transition-duration: 0.4s;
+}
+
+    .next:hover {
+        border: 1px solid #ff0009;
+        background: none;
+        color: #ff0009;
+    }
+
+.notes {
+    width: 100%;
+    min-height: 43px;
+    border: 0;
+    border-radius: 9px;
+    background: #EAF2F9;
+    color: #f9eaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: 600;
+}
+
+    .notes > span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .notes img:nth-child(1) {
+        width: 15px;
+        height: 15px;
+    }
+
+    .notes img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .notes i {
+        font-style: normal;
+        transition: .2s;
+    }
+
+    .notes.open i {
+        transform: rotate(180deg);
+    }
+
+.notes-content {
+    display: none;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #46515c;
+    padding: 10px 4px;
+}
+
+    .notes-content.open {
+        display: block;
+    }
+
+    .notes-content ul {
+        margin: 0;
+        padding-left: 18px;
+    }
+
+    .notes-content li {
+        margin-bottom: 5px;
+    }
+
+.mobile-shell {
+    display: none;
+}
+
+@media(max-width:767px) {
+    .page {
+        padding: 0;
+        display: block;
+        background: #f7fbff;
+    }
+
+        .page:after {
+            background: linear-gradient(180deg,rgba(255,0,9,.05),rgba(0,0,0,.18));
+        }
+
+    .desktop-shell {
+        display: none;
+    }
+
+    .mobile-shell {
+        display: block;
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        min-width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .mobile-hero {
+        height: 270px;
+        padding: 18px 25px 0;
+        color: #fff;
+        background: #ff0009 url('assets/mobile-top-ambank.jpg') center top / 100% 100% no-repeat;
+        background-size: 100% 100%;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .mobile-logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+        filter: brightness(0) invert(1);
+        display: block;
+    }
+
+    .mobile-trust {
+        margin-top: 5px;
+        display: grid;
+        gap: 9px;
+    }
+
+        .mobile-trust div {
+            display: grid;
+            grid-template-columns: 31px 1fr;
+            column-gap: 7px;
+            align-items: center;
+        }
+
+        .mobile-trust img {
+            width: 29px;
+            height: 29px;
+            grid-row: span 2;
+        }
+
+        .mobile-trust strong {
+            font-size: 10px;
+        }
+
+        .mobile-trust span {
+            font-size: 8px;
+        }
+
+    .mobile-card {
+        background: #fff;
+        border-radius: 30px;
+        min-height: auto;
+        margin-top: -25px;
+        width: 90%;
+        padding: 25px;
+        position: relative;
+        margin: -20px auto;
+    }
+
+        .mobile-card .stepper {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+    .stepper:before {
+        left: 17%;
+        right: 17%;
+    }
+
+    .step span {
+        font-size: 11px;
+    }
+
+    .mobile-card .transaction-card {
+        margin-bottom: 17px;
+    }
+
+    .mobile-card .field {
+        margin-bottom: 20px;
+    }
+
+    .mobile-card .input {
+        height: 47px;
+    }
+
+    .mobile-card .next {
+        height: 48px;
+    }
+
+    .mobile-vaderpay {
+        display: block;
+        width: 90px;
+        margin: 40px auto 0;
+        filter: brightness(0);
+    }
+}
+
+
+/* Transaction Details */
+.tx-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+    .tx-details img {
+        width: 10px;
+        height: 10px;
+        transition: transform .2s ease;
+    }
+
+    .tx-details.open img {
+        transform: rotate(180deg);
+    }
+
+.transaction-extra {
+    display: none;
+    border-top: 1px solid #e2e5e8;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+    .transaction-extra.open {
+        display: grid;
+        gap: 7px;
+    }
+
+    .transaction-extra > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .transaction-extra span {
+        font-size: 10px;
+        color: #68727c;
+    }
+
+    .transaction-extra strong {
+        font-size: 11px;
+        color: #202832;
+    }
+
+.tx-meta button {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+    .tx-meta button img {
+        width: 13px;
+        height: 13px;
+        object-fit: contain;
+    }
+
+/* IMPORTANT NOTES — V2 robust toggle */
+.notes-content[hidden] {
+  display: none !important;
+}
+.notes-content:not([hidden]) {
+  display: block !important;
+}
+.notes.open i {
+  transform: rotate(180deg);
+}
+
+/* AmBank wordmark in the existing logo position; no other bank logo is reused. */
+.ambank-wordmark { display:inline-block; color:#ff0009; background:#fff; font-weight:800; font-size:26px; letter-spacing:-1px; line-height:1; padding:6px 8px; border-radius:2px; }
+.mobile-wordmark { font-size:22px; }

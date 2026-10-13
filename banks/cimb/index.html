@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CIMB — Payment Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+
+  <!-- DESKTOP -->
+  <section class="desktop-shell">
+    <aside class="red-panel">
+      <div class="brand">
+        <img src="assets/bank/bank-Cimb.svg" alt="CIMB Bank">
+      </div>
+
+      <div class="trust trust-left">
+        <div class="trust-item">
+          <img src="assets/payment_gateway/icn-secure.svg" alt="">
+          <div><strong>100% Secure Payment</strong><span>Your data is fully encrypted</span></div>
+        </div>
+        <div class="trust-item">
+          <img src="assets/payment_gateway/icn-fast.svg" alt="">
+          <div><strong>Fast &amp; Reliable</strong><span>Your data is fully encrypted</span></div>
+        </div>
+        <div class="trust-item">
+          <img src="assets/payment_gateway/icn-support.svg" alt="">
+          <div><strong>24×7 Support</strong><span>Our team is always be with you</span></div>
+        </div>
+      </div>
+      <div class="city-glow"></div>
+    </aside>
+
+    <section class="white-panel">
+      <div class="stepper">
+        <div class="step active"><b>1</b><span>Login</span></div>
+        <div class="step"><b>2</b><span>Authorize</span></div>
+        <div class="step"><b>3</b><span>Receipt</span></div>
+      </div>
+
+      <div class="transaction-card">
+        <div class="tx-top">
+          <div><strong>998Bet Deposit</strong><span>Payment to 998BET</span></div>
+          <div class="amount"><span>Amount</span><strong>MYR 100.00</strong></div>
+        </div>
+        <div class="tx-meta">
+          <div><span>Transaction Ref</span><strong>BP15Q53UC9WOEI3 <button id="copyDesktop" type="button"><img src="assets/payment_gateway/icn-copy.svg" alt="Copy"></button></strong></div>
+          <div><span>Created Time</span><strong>2026-09-03 03:28:57</strong></div>
+        </div>
+        <button class="tx-details" type="button">Transaction Details <img src="assets/payment_gateway/icn-dropdown.svg" alt=""></button>
+        <div class="transaction-extra">
+          <div><span>Payment Method</span><strong>Online Transfer</strong></div>
+          <div><span>Payment Channel</span><strong>VADERPAY</strong></div>
+          <div><span>Package</span><strong>No Bonus</strong></div>
+        </div>
+      </div>
+
+      <form class="login-form" id="desktopForm" novalidate>
+        <div class="field">
+          <div class="field-head"><label>Username</label><a href="#">Forgot Username?</a></div>
+          <div class="input"><img src="assets/payment_gateway/icn-user.svg" onerror="this.style.display='none'" alt=""><span class="fallback"><img src="assets/payment_gateway/icn-user.svg" /></span><input id="duser" placeholder="Enter your username"></div>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Password</label><a href="#">Forgot Password?</a></div>
+          <div class="input"><img src="assets/payment_gateway/icn-lock.svg" onerror="this.style.display='none'" alt=""><span class="fallback"><img src="assets/payment_gateway/icn-lock.svg" /></span><input id="dpass" type="password" placeholder="Enter your password"></div>
+        </div>
+        <button class="next" type="submit">Next</button>
+        <button class="notes" type="button" id="dNotes" aria-expanded="false" aria-controls="dNotesContent"><span><img src="assets/payment_gateway/icn-important2.svg" alt="">Important Notes</span><img src="assets/payment_gateway/icn-dropdown.svg" alt=""></button>
+        <div class="notes-content" id="dNotesContent" hidden><ul>
+          <li>Kindly ensure your bank account has been activated for online payment processing.</li>
+          <li>Kindly ensure that you have sufficient funds in the account.</li>
+          <li>Kindly ensure that you have entered the correct ID and password.</li>
+          <li>Please do not click on any submit button more than once.</li>
+          <li>Please do not refresh your browser.</li>
+          <li>Please take note of the reference number if any event you need to contact our Customer Service for further action.</li>
+        </ul></div>
+      </form>
+    </section>
+  </section>
+
+  <!-- MOBILE -->
+  <section class="mobile-shell">
+    <div class="mobile-hero">
+      <img class="mobile-logo" src="assets/bank/bank-Cimb.svg" alt="CIMB Bank">
+      <div class="mobile-trust">
+        <div><img src="assets/payment_gateway/icn-secure.svg"><strong>100% Secure Payment</strong><span>Your data is fully encrypted</span></div>
+        <div><img src="assets/payment_gateway/icn-fast.svg"><strong>Fast &amp; Reliable</strong><span>Your data is fully encrypted</span></div>
+        <div><img src="assets/payment_gateway/icn-support.svg"><strong>24×7 Support</strong><span>Our team is always be with you</span></div>
+      </div>
+    </div>
+
+    <section class="mobile-card">
+      <div class="stepper">
+        <div class="step active"><b>1</b><span>Login</span></div>
+        <div class="step"><b>2</b><span>Authorize</span></div>
+        <div class="step"><b>3</b><span>Receipt</span></div>
+      </div>
+
+      <div class="transaction-card">
+        <div class="tx-top">
+          <div><strong>998Bet Deposit</strong><span>Payment to 998BET</span></div>
+          <div class="amount"><span>Amount</span><strong>MYR 100.00</strong></div>
+        </div>
+        <div class="tx-meta">
+          <div><span>Transaction Ref</span><strong>BP15Q53UC9WOEI3 <button type="button"><img src="assets/payment_gateway/icn-copy.svg" alt="Copy"></button></strong></div>
+          <div><span>Created Time</span><strong>2026-09-03 03:28:57</strong></div>
+        </div>
+        <button class="tx-details" type="button">Transaction Details <img src="assets/payment_gateway/icn-dropdown.svg" alt=""></button>
+        <div class="transaction-extra">
+          <div><span>Payment Method</span><strong>Online Transfer</strong></div>
+          <div><span>Payment Channel</span><strong>VADERPAY</strong></div>
+          <div><span>Package</span><strong>No Bonus</strong></div>
+        </div>
+      </div>
+
+      <form class="login-form" id="mobileForm" novalidate>
+        <div class="field"><div class="field-head"><label>Username</label><a href="#">Forgot Username?</a></div><div class="input"><span><img src="assets/payment_gateway/icn-user.svg" /></span><input id="muser" placeholder="Enter your username"></div></div>
+        <div class="field"><div class="field-head"><label>Password</label><a href="#">Forgot Password?</a></div><div class="input"><span><img src="assets/payment_gateway/icn-lock.svg" /></span><input id="mpass" type="password" placeholder="Enter your password"></div></div>
+        <button class="next" type="submit">Next</button>
+        <button class="notes tx-details" type="button" id="mNotes" aria-expanded="false" aria-controls="mNotesContent"><span><img src="assets/payment_gateway/icn-important2.svg" alt="">Important Notes</span><img src="assets/payment_gateway/icn-dropdown.svg" alt=""></button>
+        <div class="notes-content" id="mNotesContent" hidden><ul>
+          <li>Kindly ensure your bank account has been activated for online payment processing.</li>
+          <li>Kindly ensure that you have sufficient funds in the account.</li>
+          <li>Kindly ensure that you have entered the correct ID and password.</li>
+          <li>Please do not click on any submit button more than once.</li>
+          <li>Please do not refresh your browser.</li>
+          <li>Please take note of the reference number if any event you need to contact our Customer Service for further action.</li>
+        </ul></div>
+      </form>
+    </section>
+    <img class="mobile-vaderpay" src="assets/payment_gateway/logo-vaderpay.svg" alt="VaderPay">
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
