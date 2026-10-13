@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Select Bank</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+
+  <header class="topbar">
+    <img src="logo-zev-pay.png" class="vaderpay" alt="ZEV PAY">
+    <div class="timer"><span><img src="assets/payment_gateway/icn-timer.svg" /></span><strong id="timer">04:16</strong></div>
+  </header>
+
+  <section class="layout">
+    <section class="bank-card">
+      <div class="section-head">
+        <div class="section-icon"><img src="assets/bank/icn-bank.svg" /></div>
+        <div>
+          <h1>Select Bank</h1>
+          <p>Choose your preferred bank to proceed with payment.</p>
+        </div>
+      </div>
+
+      <div class="banks" id="banks" aria-label="Available banks"></div>
+      <p id="bankStatus" class="bank-status" role="status" aria-live="polite"></p>
+
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <aside class="summary-card">
+      <h2>Payment Summary</h2>
+      <p class="summary-sub">Please review your payment details before proceeding.</p>
+
+      <div class="summary-row amount">
+        <span>Amount</span>
+        <strong>RM 100.00</strong>
+      </div>
+      <div class="summary-row">
+        <span>Transaction ID</span>
+        <strong>TXN20260910A182 <button class="copy" type="button" aria-label="Copy transaction ID"><img src="assets/payment_gateway/copy-icon_white.svg" alt=""></button></strong>
+      </div>
+      <div class="summary-row">
+        <span>Created Date &amp; Time</span>
+        <strong>10 Sep 2026, 2:45 PM</strong>
+      </div>
+
+      <button class="important" id="importantBtn" type="button">
+          <img src="assets/bank/green-info.svg" /><span>Important Notes</span><img class="dropdown-icon" src="assets/payment_gateway/icn-dropdown-w.svg" alt="">
+      </button>
+      <div class="important-content" id="importantContent">
+        <ul>
+          <li>Kindly ensure your bank account has been activated for online payment processing.</li>
+          <li>Kindly ensure that you have sufficient funds in the account.</li>
+          <li>Please do not refresh your browser.</li>
+          <li>Please do not click on any submit button more than once.</li>
+        </ul>
+      </div>
+
+      <button class="proceed" id="proceed" type="button">Proceed to Bank <img src="assets/payment_gateway/icn-arrow.svg" alt=""></button>
+        <div class="redirect"><img style="width: 18px; height: auto; margin-top: -4px;" src="assets/payment_gateway/icn-secure-blk.svg" /> &nbsp; You will be redirected to your bank's secure site.</div>
+    </aside>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
