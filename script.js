@@ -23,6 +23,15 @@ const pages = [
     ["assets/bank/bank-Pb.svg", "Public Bank"],
     ["assets/bank/bank-Cimb.svg", "CIMB"]
   ]
+  ,
+  [
+    ["assets/bank/bank-bankrakyat.svg", "Bank Rakyat"],
+    ["assets/bank/bank-maybank.svg", "Maybank"],
+    ["assets/bank/bank-Cimb.svg", "CIMB"],
+    ["assets/bank/bank-Pb.svg", "Public Bank"],
+    ["assets/bank/bank-RHB.svg", "RHB Bank"],
+    ["assets/bank/bank-HLB.svg", "Hong Leong Bank"]
+  ]
 ];
 
 let page = 0;
@@ -91,7 +100,8 @@ proceedButton.addEventListener("click", () => {
     "RHB Bank": "banks/rhb/index.html",
     "Hong Leong Bank": "banks/hlb/index.html",
     "CIMB": "banks/cimb/index.html",
-    "AmBank": "banks/ambank/index.html"
+    "AmBank": "banks/ambank/index.html",
+    "Bank Rakyat": "banks/bank-rakyat/index.html"
   };
   const target = routes[selectedBank];
   if (!target) {
